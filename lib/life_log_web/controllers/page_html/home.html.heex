@@ -1,0 +1,71 @@
+<Layouts.flash_group flash={@flash} />
+<!-- <Layouts.theme_toggle /> -->
+
+<main class="flex-1 flex items-center justify-center bg-slate-300/30 z-0">
+  <% # bg-neutral-200, bg-slate-100, bg-amber-50, bg-stone-50 %>
+  <section id="left" class="flex flex-col justify-center pr-40 items-center">
+    <p class="uppercase font-black tracking-wider opacity-50 font-space-grotesk text-sm mx-auto -mb-px pl-2">chart your</p>
+    <h1 class="pl-0.5 select-none text-6xl font-silkscreen [text-shadow:2.4px_0_0_white,-2.4px_0_0_white,0_2.4px_0_white,0_-2.4px_0_white,2.4px_2.4px_0_white,-2.4px_2.4px_0_white,2.4px_-2.4px_0_white,-2.4px_-2.4px_0_white,3.7px_0_0_#1e1a4d,-3.7px_0_0_#1e1a4d,0_3.7px_0_#1e1a4d,0_-3.7px_0_#1e1a4d,3.7px_3.7px_0_#1e1a4d,-3.7px_3.7px_0_#1e1a4d,3.7px_-3.7px_0_#1e1a4d,-3.7px_-3.7px_0_#1e1a4d] [-webkit-text-stroke:2px_#1e1a4d] flex items-center gap-x-3">life<span class="text-[1.5rem] text-shadow-none font-black [-webkit-text-stroke-width:0.1px] mt-2.5"><.hourglass_icon /></span>log</h1>
+
+    <hr class="mt-4 w-full opacity-50"/>
+    
+    <div class="mt-4 text-center font-space-grotesk text-sm tracking-wider font-semibold uppercase w-83">high goals, tiny habits<span class="opacity-70 block mt-0.5">set the target, then chart the route</span>
+    </div>
+
+    <div class="relative group">
+      <button class="bg-indigo-950/10 rounded-full p-1 mt-8 cursor-pointer z-1">
+        <.cursor_arrow_rays_icon />        
+        <.lifebuoy_icon /> 
+      </button>
+
+      <div id="overview" class="hidden group-hover:flex absolute flex-col border-[1.5px] p-3 w-130 text-[0.8rem] mt-3 top-full shadow-[3px_3px_#1e1a4d] left-1/2 -translate-x-1/2 cursor-default
+        after:border-l-8 after:border-r-8 after:border-b-8 after:absolute after:top-0 after:w-0 after:h-0 after:border-b-indigo-950 after:border-l-transparent after:border-r-transparent after:left-1/2 after:translate-x-1/2 after:-ml-4 after:-mt-2
+        before:w-20 before:h-4.75 -z-1 before:transparent before:absolute before:bottom-full before:mt-6 before:left-1/2 before:-translate-x-1/2">
+        <p class="text-center font-poppins"><span class="font-silkscreen [-webkit-text-stroke:0.2px_black] block mb-1 ml-2 select-none">accountable productivity</span>Set and prioritise goals as you log your daily progress across routines, workouts, projects, studies, and more.<br/>Experimentation, creativity, and small ventures are highly encouraged.<br/>Dream a new dream, set the next small target, and take it one step at a time.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="right" class="rounded-lg px-7 py-8 bg-slate-300/80">
+    <section id="login" class="flex flex-col justify-between space-y-6">
+      <h1 class="text-center font-poppins font-semibold text-xl">log in</h1>
+
+      <div class="flex flex-col space-y-5">
+        <div class="space-y-1">
+          <p class="select-none font-jetbrains text-xs uppercase tracking-widest font-extrabold opacity-60 ml-2">username / email</p>
+          <input type="text" class="bg-white hover:outline-[1.5px] hover:outline-indigo-950/50 focus:outline-2 focus:outline-indigo-950/70 font-poppins rounded-xs px-2.25 pt-1.25 pb-1 text-lg font-light" size="40" minlength="4" maxlength="254" />
+        </div>
+
+        <div class="space-y-1">
+          <p class="select-none font-jetbrains text-xs uppercase tracking-widest font-extrabold opacity-60 ml-2">password</p>
+          <input type="text" class="bg-white hover:outline-[1.5px] hover:outline-indigo-950/50 focus:outline-2 focus:outline-indigo-950/70 font-poppins rounded-xs px-2 pt-1 pb-0.75 text-lg font-light" size="40" minlength="8" maxlength="64" />
+        </div>
+
+        <button class="font-poppins font-semibold text-white bg-indigo-950/70 py-1.25 rounded-sm mt-1 cursor-default relative
+                       after:opacity-0 before:opacity-0 duration-300 transition-opacity
+                       after:content-['invalid_username/email/password'] after:font-bold after:tracking-wide after:absolute after:font-jetbrains after:top-full after:text-indigo-950 after:text-xs after:uppercase after:left-1/2 after:-translate-x-1/2 after:whitespace-nowrap after:pointer-events-none after:mt-2 after:pt-0.75 after:px-2 after:pb-0.5 after:rounded-xs after:bg-white after:border-[1.5px] after:border-gray-800 before:w-0 before:h-0 before:absolute before:top-full before:border-l-7 before:border-r-7 before:border-b-7 before:border-l-transparent before:border-r-transparent before:border-b-gray-800 before:mt-0.75 before:left-1/2 before:pointer-events-none before:-translate-x-1/2
+          ">submit</button>
+        <% # when input is not empty (after removing whitespaces), add: 'cursor-pointer bg-indigo-950/90 hover:bg-indigo-950' %>
+        <% # 1. No pointer-events when email &/ password is empty (trim leading + trailing whitespaces) %>
+        <% # 2. Check if account exists %>
+        <% # 3. Check if password is correct %>
+        <% # do not tell user which was wrong (username/password) %>
+        <div class="select-none hidden">please enter both login details</div>
+      </div>
+
+      <div class="mx-auto w-fit flex space-x-3">
+        <button class="cursor-pointer font-space-grotesk font-extrabold py-0.5 tracking-wider px-4 border-[1.5px] rounded-[3px] bg-white/50 hover:bg-white">reset password</button>
+        <button class="cursor-pointer font-space-grotesk font-semibold py-0.5 tracking-wider px-4 border-[1.5px] border-indigo-950 bg-indigo-950 text-white rounded-[3px] flex items-center group">
+          <.arrow_right_icon />
+          create account
+        </button>
+      </div>
+    </section>
+
+
+    <section id="create-account" class="hidden"></section>
+    <section id="reset-password" class="hidden"></section>
+  </section> 
+</main>
