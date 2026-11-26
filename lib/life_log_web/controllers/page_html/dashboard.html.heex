@@ -2,4 +2,83 @@
 
 <% # fixed left bar %>
 <% # scrollable main/right (~80% of screen) with a grid layout of any sort (grid-template required) %>
+<main class="flex-1 bg-slate-300/30 text-[0.93rem] tracking-wide">
 
+  <section id="dashboard-navbar" class="w-63 h-full fixed top-0 left-0 bg-slate-300/40 px-2 py-3 flex flex-col font-poppins font-medium">
+
+    <div class="flex items-center text-lg pl-1 py-0.5 group relative space-x-2">
+      <.dashboard_logo />
+      <p class="font-bold opacity-70">LifeLog</p>
+    </div>
+
+    <!-- DAILY -->
+
+    <div class="flex flex-col space-y-7 mt-5">
+      <div class="flex flex-col space-y-1.25">
+        <p class="select-none uppercase text-xs font-jetbrains tracking-wider font-bold ml-2 mb-1.5">Daily</p>
+
+        <button class="item-selected bg-[#1e1a4d] text-white py-1.5 px-4 text-left rounded-sm flex items-center space-x-2.25">
+          <.home_icon />
+          <span class="leading-2 mt-0.75">Dashboard</span>
+        </button>
+
+        <button class="cursor-pointer py-1.5 px-4 text-left rounded-sm flex items-center space-x-2.25 opacity-80 hover:bg-slate-400/30 hover:opacity-100">
+          <.bell_icon />
+          <span class="leading-2 mt-px">Reminders</span>
+        </button>
+
+        <button class="cursor-pointer py-1.5 px-4 text-left rounded-sm flex items-center space-x-2.25 opacity-80 hover:bg-slate-400/30 hover:opacity-100">
+          <.calendar_icon />
+          <span class="leading-2 mt-0.5">Schedule</span> <!-- daily routine -->
+        </button>
+      </div>
+
+      <!-- GOALS -->
+
+      <div class="flex flex-col space-y-1">
+        <p class="select-none uppercase text-xs font-jetbrains tracking-wider font-bold ml-2 mb-1.5">Goals</p>
+
+        <button class="cursor-pointer py-1.5 px-4 text-left rounded-sm flex items-center space-x-2.25 opacity-80 hover:bg-slate-400/30 hover:opacity-100">
+          <.open_book_icon />
+          <span class="leading-2">Journal</span>
+        </button>
+
+        <button class="cursor-pointer py-1.5 px-4 text-left rounded-sm flex items-center space-x-2.25 opacity-80 hover:bg-slate-400/30 hover:opacity-100">
+          <.heart_icon />
+          <span class="leading-2 mt-px">Health</span>
+        </button>
+
+        <button class="cursor-pointer py-1.5 px-4 text-left rounded-sm flex items-center space-x-2.25 opacity-80 hover:bg-slate-400/30 hover:opacity-100">
+          <.map_icon />
+          <span class="leading-2 mt-px">Milestones</span>
+        </button>
+      </div>
+
+      <!-- ACCOUNT -->
+
+      <div class="flex flex-col space-y-1">
+        <p class="select-none uppercase text-xs font-jetbrains tracking-wider font-bold ml-2 mb-1.5">Account</p>
+
+        <button class="cursor-pointer py-1.5 px-4 text-left rounded-sm flex items-center space-x-2.25 opacity-80 hover:bg-slate-400/30 hover:opacity-100">
+          <.settings_icon />
+          <span class="leading-2 mt-px">Settings</span>
+        </button>
+
+        <button class="cursor-pointer py-1.5 px-4 text-left rounded-sm flex items-center space-x-2.25 opacity-80 hover:bg-slate-400/30 hover:opacity-100">
+          <.profile_icon />
+          <span class="leading-2 mt-px">Profile</span>
+        </button>
+      </div> 
+    </div>
+
+
+
+
+    <button class="mt-auto cursor-pointer py-0.5 pl-5 pr-0.5 text-left rounded-full flex justify-between items-center space-x-2.25 bg-[#1e1a4d] text-white border-2 border-[#1e1a4d] hover:text-[#1e1a4d] hover:font-semibold hover:bg-white group">
+      <span class="leading-2 mt-px">Logout?</span>
+      <div class="rounded-full p-1.25 bg-white/70 text-[#1e1a4d] group-hover:bg-[#1e1a4d]/80 group-hover:text-white">
+        <.logout_icon />
+      </div>
+    </button>
+  </section>
+</main>
